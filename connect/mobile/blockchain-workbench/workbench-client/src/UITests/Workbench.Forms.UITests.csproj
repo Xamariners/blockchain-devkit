@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -34,13 +34,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iOS\AppBuilder.Forms.iOS.csproj">
+    <ProjectReference Include="..\iOS\Workbench.Forms.iOS.csproj">
       <Project>{21D298D5-5716-4063-9435-00E6DD0B5794}</Project>
       <Name>Workbench.Forms.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Droid\AppBuilder.Forms.Droid.csproj">
+    <ProjectReference Include="..\Droid\Workbench.Forms.Droid.csproj">
       <Project>{B3FBBB09-0E50-421D-ADDA-E061CB7A642B}</Project>
       <Name>Workbench.Forms.Droid</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
