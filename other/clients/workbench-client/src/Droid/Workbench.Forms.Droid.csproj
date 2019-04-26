@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3FBBB09-0E50-421D-ADDA-E061CB7A642B}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Workbench.Forms.Droid</RootNamespace>
+    <AssemblyName>Workbench.Forms.Droid</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <AndroidTlsProvider>btls</AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AotAssemblies>true</AotAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="RadialProgress\RadialProgressViewStyle.cs" />
+    <Compile Include="RadialProgress\RadialProgressView.cs" />
+    <Compile Include="RadialProgress\ProgressViewRenderer.cs" />
+    <Compile Include="RadialProgress\AttributeParser.cs" />
+    <Compile Include="Renderers\ButtonRendererDroid.cs" />
+    <Compile Include="SplashActivity.cs" />
+    <Compile Include="Service Implementations\Database_Droid.cs" />
+    <Compile Include="Service Implementations\Authentication_Droid.cs" />
+    <Compile Include="Effects\FontAwesomeEffect.cs" />
+    <Compile Include="Effects\SelectedButtonEffect.cs" />
+    <Compile Include="Renderers\NestedListViewRendererDroid.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+    <None Include="appcenter-pre-build.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable\user.png" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\gradientBackground.xml" />
+    <AndroidResource Include="Resources\anim\fadein.xml" />
+    <AndroidResource Include="Resources\layout\SplashPage.axml" />
+    <AndroidResource Include="Resources\layout\button_border.xml" />
+    <AndroidResource Include="Resources\layout\unselected_button.xml" />
+    <AndroidResource Include="Resources\drawable\workbenchadd.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\BlockchainColor.png" />
+    <AndroidResource Include="Resources\drawable\delete_icon.png" />
+    <AndroidResource Include="Resources\drawable\settings_black.png" />
+    <AndroidResource Include="Resources\drawable\ic_settings_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\iconize-fontawesome.ttf" />
+    <AndroidAsset Include="Assets\progress_bar.json" />
+    <AndroidAsset Include="Assets\checked_done.json" />
+    <AndroidAsset Include="Assets\loading.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ic_settings_black_36px.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Workbench.Forms\Workbench.Forms.csproj">
+      <Project>{14CA9054-1CE8-4AE6-8B99-970070231079}</Project>
+      <Name>Workbench.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  </Project>
